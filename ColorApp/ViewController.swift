@@ -21,7 +21,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenTextbox: UITextField!
     
     @IBOutlet weak var blueTextbox: UITextField!
+
+    @IBAction func randomButton(_ sender: UIButton) {
+        let randomRed = Int.random(in: 0 ..< 256)
+        let randomGreen = Int.random(in: 0 ..< 256)
+        let randomBlue = Int.random(in: 0 ..< 256)
+        
+        redSlider.value = Float(randomRed)
+        greenSlider.value = Float(randomGreen)
+        blueSlider.value = Float(randomBlue)
+        
+        changeColor(redSlider)
+        changeColor(greenSlider)
+        changeColor(blueSlider)
+        
+        changeBackgroundColor()
+    }
     
+    //This method changes Textbox value on slider change
     @IBAction func changeColor(_ sender: UISlider) {
         let position:Int = sender.tag
         
@@ -96,7 +113,15 @@ class ViewController: UIViewController {
             blueSlider.setValue(Float(blue)!, animated: true)
         }
     }
-
+    
+    // dismiss keyboard on touch outside textfield
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for txt in self.view.subviews {
+            if txt.isKind(of: UITextField.self) && txt.isFirstResponder {
+                txt.resignFirstResponder()
+            }
+        }
+    }
 }
 
 
