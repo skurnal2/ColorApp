@@ -12,15 +12,18 @@ class TextViewController: UIViewController {
     
     var backColor : UIColor = UIColor.red //Default to white
     
-    @IBOutlet weak var backColorView: UIView!
 
+    @IBOutlet weak var textToSet: UITextField!
+    
     
     @IBOutlet weak var textOutput: UILabel!
     
+    @IBAction func changeText(_ sender: UIButton) {
+        setTextBox(textOutput.text!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         let textAttributes = [
             NSAttributedString.Key.strokeColor : UIColor.black,
@@ -28,16 +31,28 @@ class TextViewController: UIViewController {
             NSAttributedString.Key.strokeWidth : -4.0,
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 60)]
             as [NSAttributedString.Key : Any]
+        textOutput.backgroundColor = backColor
+        
         
         textOutput.attributedText = NSMutableAttributedString(string: "SAMPLE", attributes: textAttributes)
-        backColorView.layer.backgroundColor = backColor.cgColor
+        
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        backColorView.layer.backgroundColor = backColor.cgColor
+    func setTextBox(_ text : String) {
+        let textAttributes = [
+            NSAttributedString.Key.strokeColor : UIColor.black,
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.strokeWidth : -4.0,
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 60)]
+            as [NSAttributedString.Key : Any]
+        textOutput.backgroundColor = backColor
+        
+        
+        textOutput.attributedText = NSMutableAttributedString(string: text, attributes: textAttributes)
     }
-   
+    
+
     /*
     // MARK: - Navigation
 
