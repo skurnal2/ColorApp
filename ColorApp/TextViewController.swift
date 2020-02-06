@@ -9,27 +9,34 @@
 import UIKit
 
 class TextViewController: UIViewController {
-
     
-    var colorChosen : UIColor = UIColor.white //Default to white
+    var backColor : UIColor = UIColor.red //Default to white
+    
+    @IBOutlet weak var backColorView: UIView!
+
     
     @IBOutlet weak var textOutput: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let strokeTextAttributes = [
+        
+        
+        let textAttributes = [
             NSAttributedString.Key.strokeColor : UIColor.black,
-            NSAttributedString.Key.foregroundColor : colorChosen,
+            NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.strokeWidth : -4.0,
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 60)]
             as [NSAttributedString.Key : Any]
         
-        textOutput.attributedText = NSMutableAttributedString(string: "SAMPLE", attributes: strokeTextAttributes)
-        
+        textOutput.attributedText = NSMutableAttributedString(string: "SAMPLE", attributes: textAttributes)
+        backColorView.layer.backgroundColor = backColor.cgColor
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        backColorView.layer.backgroundColor = backColor.cgColor
+    }
    
     /*
     // MARK: - Navigation

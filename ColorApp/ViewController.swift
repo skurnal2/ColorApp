@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var blueTextbox: UITextField!
 
+    @IBOutlet weak var sampleLabel: UILabel!
+    
     @IBAction func testTextGo(_ sender: UIButton) {
         self.performSegue(withIdentifier: "textSegue", sender: self)
     }
@@ -61,16 +63,9 @@ class ViewController: UIViewController {
     
     func changeBackgroundColor()
     {
-        //Getting the colors from textfields
-        let redVal:String = redTextbox.text!
-        let greenVal:String = greenTextbox.text!
-        let blueVal:String = blueTextbox.text!
+        let colorChosen = getColorChosen()
         
-        let red: CGFloat = CGFloat((redVal as NSString).doubleValue)/255
-        let green: CGFloat = CGFloat((greenVal as NSString).doubleValue)/255
-        let blue: CGFloat = CGFloat((blueVal as NSString).doubleValue)/255
-        
-        colorView.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+        colorView.backgroundColor = colorChosen
     }
     
     override func viewDidLoad() {
@@ -79,7 +74,17 @@ class ViewController: UIViewController {
         //Setting some initial features to view
         colorView.layer.borderWidth = 6
         colorView.layer.borderColor = UIColor.gray.cgColor
-        colorView.layer.backgroundColor = UIColor.yellow.cgColor
+        colorView.layer.backgroundColor = getColorChosen().cgColor
+        
+        //Setting the display sample text attributes
+        let textAttributes = [
+            NSAttributedString.Key.strokeColor : UIColor.black,
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.strokeWidth : -2.0,
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]
+            as [NSAttributedString.Key : Any]
+        
+        sampleLabel.attributedText = NSMutableAttributedString(string: "SAMPLE", attributes: textAttributes)
     }
 
     //Custom Functions
@@ -129,7 +134,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let textVC = segue.destination as? TextViewController
-        
+        textVC?.backColor = getColorChosen()
+    }
+    
+    func getColorChosen() -> UIColor {
         //Getting the colors from textfields
         let redVal:String = redTextbox.text!
         let greenVal:String = greenTextbox.text!
@@ -140,8 +148,7 @@ class ViewController: UIViewController {
         let blue: CGFloat = CGFloat((blueVal as NSString).doubleValue)/255
         
         let colorChosen = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
-        textVC?.colorChosen = colorChosen
-        
+        return colorChosen
     }
     
     @IBAction func unwindTextVC(segue: UIStoryboardSegue)
