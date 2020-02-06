@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var blueTextbox: UITextField!
 
+    @IBAction func testTextGo(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "textSegue", sender: self)
+    }
+    
     @IBAction func randomButton(_ sender: UIButton) {
         let randomRed = Int.random(in: 0 ..< 256)
         let randomGreen = Int.random(in: 0 ..< 256)
@@ -122,6 +126,29 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let textVC = segue.destination as? TextViewController
+        
+        //Getting the colors from textfields
+        let redVal:String = redTextbox.text!
+        let greenVal:String = greenTextbox.text!
+        let blueVal:String = blueTextbox.text!
+        
+        let red: CGFloat = CGFloat((redVal as NSString).doubleValue)/255
+        let green: CGFloat = CGFloat((greenVal as NSString).doubleValue)/255
+        let blue: CGFloat = CGFloat((blueVal as NSString).doubleValue)/255
+        
+        let colorChosen = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+        textVC?.colorChosen = colorChosen
+        
+    }
+    
+    @IBAction func unwindTextVC(segue: UIStoryboardSegue)
+    {
+    }
+    
+    
 }
 
 
