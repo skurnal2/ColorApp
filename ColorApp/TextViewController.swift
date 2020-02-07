@@ -11,51 +11,76 @@ import UIKit
 class TextViewController: UIViewController {
     
     var backColor : UIColor = UIColor.red //Default to white
-    
+    var textFromMain : String = "SAMPLE"
+    var sizeFromMain : Int = 40
 
     @IBOutlet weak var textToSet: UITextField!
     
     @IBOutlet weak var sizeSliderValue: UISlider!
     
     @IBAction func sizeSlider(_ sender: Any) {
-        setTextBox(textString: textToSet.text!, fontSize: Float(sizeSliderValue.value))
+        setTextBox(textString: textToSet.text!, fontSize: Int(Float(sizeSliderValue.value)))
     }
     @IBOutlet weak var textOutput: UILabel!
     
     @IBAction func changeText(_ sender: UIButton) {
-        setTextBox(textString: textToSet.text!, fontSize: Float(sizeSliderValue.value))
+        setTextBox(textString: textToSet.text!, fontSize: Int(Float(sizeSliderValue.value)))
+    }
+    
+    var tag = 1
+    
+    //this function runs before the segue is performed
+    //Here, giving the tag value if save changes is pressed
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let barButton = sender as? UIBarButtonItem
+        if barButton?.tag == 0 {
+            tag = 0
+        }
+        else
+        {
+            tag = 1
+        }
+        
+    }
+
+    @IBAction func saveChanges(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "Edit Text", message: "Are you sure you want to complete editing?", preferredStyle: .actionSheet)
+        
+        let noAction = UIAlertAction(title: "No", style: .destructive, handler: nil)
+        
+        let saveAction = UIAlertAction(title: "Yes", style: .default) { (action) in
+            //Manually calling unwind segue (Manual unwind segue was created by control dragging  VC to exit)
+            self.performSegue(withIdentifier: "saveChangesSegue", sender: action)
+        }
+
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(noAction)
+    
+        present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTextBox(textString: "SAMPLE", fontSize: Float(sizeSliderValue.value))
-        
-        // Do any additional setup after loading the view.
+        //Setting Initial Text on Box Label and Text Field
+        //also setting the slider to value obtained from main page
+        setTextBox(textString: textFromMain, fontSize: sizeFromMain)
+        textToSet.text = textFromMain
+        sizeSliderValue.value = Float(sizeFromMain)
     }
     
-    func setTextBox(textString : String, fontSize : Float) {
+    func setTextBox(textString : String, fontSize : Int) {
         let textAttributes = [
             NSAttributedString.Key.strokeColor : UIColor.black,
             NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.strokeWidth : -4.0,
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: CGFloat(Int(fontSize)))]
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: CGFloat(fontSize))]
             as [NSAttributedString.Key : Any]
         textOutput.backgroundColor = backColor
         
         
         textOutput.attributedText = NSMutableAttributedString(string: textString, attributes: textAttributes)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

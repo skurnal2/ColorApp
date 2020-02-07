@@ -68,6 +68,10 @@ class ViewController: UIViewController {
         colorView.backgroundColor = colorChosen
     }
     
+    //setting the initial values
+    var currentFontSize : CGFloat = CGFloat(40)
+    var currentText = "SAMPLE"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,17 +80,21 @@ class ViewController: UIViewController {
         colorView.layer.borderColor = UIColor.gray.cgColor
         colorView.layer.backgroundColor = getColorChosen().cgColor
         
+        setBoxText()
+    }
+
+    func setBoxText() {
         //Setting the display sample text attributes
         let textAttributes = [
             NSAttributedString.Key.strokeColor : UIColor.black,
             NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.strokeWidth : -2.0,
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: currentFontSize)]
             as [NSAttributedString.Key : Any]
         
-        sampleLabel.attributedText = NSMutableAttributedString(string: "SAMPLE", attributes: textAttributes)
+        sampleLabel.attributedText = NSMutableAttributedString(string: currentText, attributes: textAttributes)
     }
-
+    
     //Custom Functions
     func updateTextbox(_ position: Int)
     {
@@ -135,6 +143,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let textVC = segue.destination as? TextViewController
         textVC?.backColor = getColorChosen()
+        textVC?.textFromMain = currentText
+        textVC?.sizeFromMain = Int(currentFontSize)
     }
     
     func getColorChosen() -> UIColor {
@@ -153,6 +163,15 @@ class ViewController: UIViewController {
     
     @IBAction func unwindTextVC(segue: UIStoryboardSegue)
     {
+        let textVC = segue.source as? TextViewController
+        //Checking if Go back or save changes button was pressed, if save changes is pressed, then getting the values and updating them here on this page.
+        if(textVC?.tag == 1) {
+           // destinationMessageLabel.text = destinationVC?.textfieldDestination.text
+            currentFontSize = CGFloat(textVC?.sizeSliderValue.value ?? 40)
+            currentText = (textVC?.textToSet.text!)!
+            setBoxText()
+        }
+        
     }
     
     
