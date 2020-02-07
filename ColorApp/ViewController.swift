@@ -71,6 +71,7 @@ class ViewController: UIViewController {
     //setting the initial values
     var currentFontSize : CGFloat = CGFloat(40)
     var currentText = "SAMPLE"
+    var currentThickness = 4;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
         let textAttributes = [
             NSAttributedString.Key.strokeColor : UIColor.black,
             NSAttributedString.Key.foregroundColor : UIColor.white,
-            NSAttributedString.Key.strokeWidth : -2.0,
+            NSAttributedString.Key.strokeWidth : -currentThickness,
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: currentFontSize)]
             as [NSAttributedString.Key : Any]
         
@@ -145,6 +146,7 @@ class ViewController: UIViewController {
         textVC?.backColor = getColorChosen()
         textVC?.textFromMain = currentText
         textVC?.sizeFromMain = Int(currentFontSize)
+        textVC?.thicknessFromMain = Int(currentThickness)
     }
     
     func getColorChosen() -> UIColor {
@@ -169,6 +171,7 @@ class ViewController: UIViewController {
            // destinationMessageLabel.text = destinationVC?.textfieldDestination.text
             currentFontSize = CGFloat(textVC?.sizeSliderValue.value ?? 40)
             currentText = (textVC?.textToSet.text!)!
+            currentThickness = Int((textVC?.borderThicknessSliderValue.value)!)
             setBoxText()
         }
         
