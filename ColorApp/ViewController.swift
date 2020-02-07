@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -59,6 +60,16 @@ class ViewController: UIViewController {
         
         updateSlider(position)
         changeBackgroundColor()
+    }
+    
+    
+    @IBAction func textToSpeech(_ sender: UIButton) {
+        let utterance = AVSpeechUtterance(string: currentText)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.rate = 0.4
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
     
     func changeBackgroundColor()

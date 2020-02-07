@@ -22,7 +22,7 @@
                                 <rect key="frame" x="15" y="44" width="384" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ODK-wD-RFb">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="697"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="742"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-Qf-5tH">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="108.5"/>
@@ -47,14 +47,23 @@
                                                     <constraint firstItem="qIa-Hw-Sl0" firstAttribute="centerY" secondItem="06j-KB-eIp" secondAttribute="centerY" id="yVG-fC-5h5"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1y-ck-EV2">
+                                                <rect key="frame" x="0.0" y="282.5" width="384" height="22"/>
+                                                <state key="normal" title="Text To Speech" image="speaker-icon">
+                                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="textToSpeech:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8H4-vK-Efl"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mw8-vc-l7Q">
-                                                <rect key="frame" x="0.0" y="282.5" width="384" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="327.5" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="left" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="b0g-uI-GN7">
-                                                <rect key="frame" x="0.0" y="326" width="384" height="30"/>
+                                                <rect key="frame" x="0.0" y="371" width="384" height="30"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-FF-wcg">
                                                         <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
@@ -80,13 +89,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-9J-MC4">
-                                                <rect key="frame" x="0.0" y="379" width="384" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="424" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="auF-4R-ibj">
-                                                <rect key="frame" x="0.0" y="422.5" width="384" height="30"/>
+                                                <rect key="frame" x="0.0" y="467.5" width="384" height="30"/>
                                                 <subviews>
                                                     <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-d0-tMP">
                                                         <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
@@ -112,13 +121,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNe-1U-KfL">
-                                                <rect key="frame" x="0.0" y="475.5" width="384" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="520.5" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Wjg-3k-eKE">
-                                                <rect key="frame" x="0.0" y="519" width="384" height="30"/>
+                                                <rect key="frame" x="0.0" y="564" width="384" height="30"/>
                                                 <subviews>
                                                     <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bUg-nk-aiI">
                                                         <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
@@ -144,7 +153,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyb-qV-rQN">
-                                                <rect key="frame" x="0.0" y="572" width="384" height="51"/>
+                                                <rect key="frame" x="0.0" y="617" width="384" height="51"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
                                                 <color key="tintColor" red="1" green="0.99165439639999997" blue="0.32767891500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -156,7 +165,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eo-TI-HXM">
-                                                <rect key="frame" x="0.0" y="646" width="384" height="51"/>
+                                                <rect key="frame" x="0.0" y="691" width="384" height="51"/>
                                                 <color key="backgroundColor" red="1" green="0.99165439639999997" blue="0.32767891500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
                                                 <state key="normal" title="Change Text"/>
@@ -340,4 +349,7 @@
             <point key="canvasLocation" x="598.55072463768124" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="speaker-icon" width="15" height="15"/>
+    </resources>
 </document>
