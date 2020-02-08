@@ -25,6 +25,9 @@ class TextViewController: UIViewController {
         setTextBox(textString: textToSet.text!, fontSize: Int(Float(sizeSliderValue.value)), thickness: Int(borderThicknessSliderValue.value))
     }
     
+    @IBAction func doneEditing(_ sender: UITextField) {
+        textToSet.resignFirstResponder()
+    }
     
     @IBAction func thicknessSlider(_ sender: UISlider) {
         setTextBox(textString: textToSet.text!, fontSize: Int(Float(sizeSliderValue.value)), thickness: Int(borderThicknessSliderValue.value))
