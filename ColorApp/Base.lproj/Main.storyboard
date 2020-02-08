@@ -250,15 +250,21 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-i1-eyB">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="42"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SAMPLE" borderStyle="roundedRect" placeholder="enter text" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ikf-9p-qgt">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SAMPLE" borderStyle="roundedRect" placeholder="enter text" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ikf-9p-qgt">
                                                         <rect key="frame" x="0.0" y="0.0" width="317" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="317" id="sew-D0-00B"/>
+                                                        </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-f0-mMI">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-f0-mMI">
                                                         <rect key="frame" x="337" y="0.0" width="56" height="42"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="IK8-Sw-9U3"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title=" SET "/>
@@ -282,6 +288,9 @@
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="10" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="DER-vm-XDt">
                                                         <rect key="frame" x="101" y="0.0" width="294" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="AYt-k4-71d"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="sizeSlider:" destination="WAP-zL-2ux" eventType="valueChanged" id="jA6-Tf-Kr9"/>
                                                         </connections>
@@ -302,6 +311,9 @@
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sx3-cK-AOv">
                                                         <rect key="frame" x="101" y="0.0" width="294" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="kYn-4H-G53"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="thicknessSlider:" destination="WAP-zL-2ux" eventType="valueChanged" id="Dfb-Gm-U85"/>
                                                         </connections>
@@ -340,7 +352,7 @@
                         <outlet property="sizeSliderValue" destination="DER-vm-XDt" id="XYU-Hy-xie"/>
                         <outlet property="textOutput" destination="C8f-Tq-54n" id="FkQ-kz-eN8"/>
                         <outlet property="textToSet" destination="ikf-9p-qgt" id="suT-xv-lH2"/>
-                        <segue destination="974-M3-G91" kind="unwind" unwindAction="unwindTextVCWithSegue:" id="qoe-Q3-iCa"/>
+                        <segue destination="974-M3-G91" kind="unwind" identifier="goBackSegue" unwindAction="unwindTextVCWithSegue:" id="qoe-Q3-iCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiY-4V-T3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
