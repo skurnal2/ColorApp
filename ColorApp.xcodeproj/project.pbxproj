@@ -13,6 +13,8 @@
 		79AA77E423D919F700B703E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AA77E223D919F700B703E9 /* Main.storyboard */; };
 		79AA77E623D919F900B703E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AA77E523D919F900B703E9 /* Assets.xcassets */; };
 		79AA77E923D919F900B703E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AA77E723D919F900B703E9 /* LaunchScreen.storyboard */; };
+		79BFA8F42413221700A62E8E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFA8F32413221700A62E8E /* TabBarViewController.swift */; };
+		79BFA8F6241323BA00A62E8E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFA8F5241323BA00A62E8E /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		79AA77E523D919F900B703E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79AA77E823D919F900B703E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79AA77EA23D919F900B703E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79BFA8F32413221700A62E8E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		79BFA8F5241323BA00A62E8E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				79AA77E723D919F900B703E9 /* LaunchScreen.storyboard */,
 				79AA77EA23D919F900B703E9 /* Info.plist */,
 				79712F2023EBA43D00CC3D9C /* TextViewController.swift */,
+				79BFA8F32413221700A62E8E /* TabBarViewController.swift */,
+				79BFA8F5241323BA00A62E8E /* PickerViewController.swift */,
 			);
 			path = ColorApp;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BFA8F6241323BA00A62E8E /* PickerViewController.swift in Sources */,
+				79BFA8F42413221700A62E8E /* TabBarViewController.swift in Sources */,
 				79AA77E123D919F700B703E9 /* ViewController.swift in Sources */,
 				79AA77DF23D919F700B703E9 /* AppDelegate.swift in Sources */,
 				79712F2123EBA43D00CC3D9C /* TextViewController.swift in Sources */,

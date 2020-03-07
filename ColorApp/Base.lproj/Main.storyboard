@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dKF-Xe-VaX">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-40-apA">
-                                <rect key="frame" x="15" y="44" width="384" height="818"/>
+                                <rect key="frame" x="15" y="44" width="384" height="769"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ODK-wD-RFb">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="742"/>
@@ -194,6 +194,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Slider" selectedImage="speaker-icon" id="Ehk-Mw-vQP"/>
                     <connections>
                         <outlet property="blueSlider" destination="Dzt-d0-tMP" id="Kfl-5Y-5H2"/>
                         <outlet property="blueTextbox" destination="TYW-VJ-2Dy" id="mJE-sx-2H5"/>
@@ -208,7 +209,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="137"/>
+            <point key="canvasLocation" x="-1045" y="-68"/>
+        </scene>
+        <!--TabBarVC-->
+        <scene sceneID="yjZ-01-gsd">
+            <objects>
+                <tabBarController title="TabBarVC" id="dKF-Xe-VaX" customClass="TabBarViewController" customModule="ColorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ckQ-MV-lVX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qXD-sX-5fF"/>
+                        <segue destination="Np1-Hs-yUH" kind="relationship" relationship="viewControllers" id="TF8-9r-H7y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBT-j2-if1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="-843"/>
         </scene>
         <!--TextVC-->
         <scene sceneID="wBx-lA-cHQ">
@@ -361,7 +380,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiY-4V-T3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="974-M3-G91" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="598.55072463768124" y="136.60714285714286"/>
+            <point key="canvasLocation" x="28" y="-68"/>
+        </scene>
+        <!--MainPickerVC-->
+        <scene sceneID="4JI-cv-tgR">
+            <objects>
+                <viewController title="MainPickerVC" id="Np1-Hs-yUH" customClass="PickerViewController" customModule="ColorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9vH-tL-xSU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXB-kB-vVo">
+                                <rect key="frame" x="0.0" y="142" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Np1-Hs-yUH" id="nR1-Ia-m4b"/>
+                                    <outlet property="delegate" destination="Np1-Hs-yUH" id="dDt-vy-g4g"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAo-BA-aPL">
+                                <rect key="frame" x="89" y="69" width="236" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JXB-kB-vVo" firstAttribute="top" secondItem="vAo-BA-aPL" secondAttribute="bottom" constant="18" id="47r-Gr-dLu"/>
+                            <constraint firstItem="JXB-kB-vVo" firstAttribute="leading" secondItem="63C-be-EIm" secondAttribute="leading" id="FSK-YB-VTH"/>
+                            <constraint firstItem="vAo-BA-aPL" firstAttribute="centerX" secondItem="9vH-tL-xSU" secondAttribute="centerX" id="Kgw-SN-Kbc"/>
+                            <constraint firstItem="JXB-kB-vVo" firstAttribute="trailing" secondItem="63C-be-EIm" secondAttribute="trailing" id="oTq-Y5-SID"/>
+                            <constraint firstItem="vAo-BA-aPL" firstAttribute="top" secondItem="63C-be-EIm" secondAttribute="top" constant="25" id="ygQ-ko-b67"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="63C-be-EIm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Picker" selectedImage="speaker-icon" id="U5Y-FP-ZN4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CU1-CO-vks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="-68"/>
         </scene>
     </scenes>
     <resources>
