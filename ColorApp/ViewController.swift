@@ -83,28 +83,46 @@ class ViewController: UIViewController {
     var currentFontSize : CGFloat = CGFloat(40)
     var currentText = "SAMPLE"
     var currentThickness = 4;
+    var currentTextColor = UIColor.white
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewLoadSetup()
         
+    }
+
+    //To Reload when screen appears from other tab
+    func viewLoadSetup() {
         //Setting some initial features to view
         colorView.layer.borderWidth = 6
         colorView.layer.borderColor = UIColor.gray.cgColor
         colorView.layer.backgroundColor = getColorChosen().cgColor
         
+        //setting the text Color
+        currentTextColor = AppDelegate.shared().currentTextColor
+        
         setBoxText()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewLoadSetup()
+    }
+    
     func setBoxText() {
         //Setting the display sample text attributes
         let textAttributes = [
             NSAttributedString.Key.strokeColor : UIColor.black,
-            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.foregroundColor : currentTextColor,
             NSAttributedString.Key.strokeWidth : -currentThickness,
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: currentFontSize)]
             as [NSAttributedString.Key : Any]
         
         sampleLabel.attributedText = NSMutableAttributedString(string: currentText, attributes: textAttributes)
+        
+        //Changing values to delegate so as to access them in other view controllers
+        AppDelegate.shared().currentFontSize = currentFontSize
+        AppDelegate.shared().currentText = currentText
+        AppDelegate.shared().currentThickness = currentThickness
     }
     
     //Custom Functions
@@ -171,6 +189,10 @@ class ViewController: UIViewController {
         let blue: CGFloat = CGFloat((blueVal as NSString).doubleValue)/255
         
         let colorChosen = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
+        
+        //Setting new color in delegate file
+        AppDelegate.shared().currentBackgroundColor = colorChosen
+        
         return colorChosen
     }
     
@@ -187,6 +209,8 @@ class ViewController: UIViewController {
         }
         
     }
+    
+ 
     
     
 }

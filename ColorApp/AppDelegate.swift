@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var currentFontSize : CGFloat = CGFloat(40);
+    var currentText = "SAMPLE";
+    var currentThickness = 4;
+    var currentTextColor = UIColor.white
+    var currentBackgroundColor = UIColor.yellow
+    
+    static func shared() -> AppDelegate{
+        return UIApplication.shared.delegate as! AppDelegate
+    } //We can access this function using class name dot function name, then we can access the values
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
