@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		79712F2123EBA43D00CC3D9C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79712F2023EBA43D00CC3D9C /* TextViewController.swift */; };
+		7985BA99241722A000078A26 /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7985BA98241722A000078A26 /* QuotesTableViewController.swift */; };
 		79AA77DF23D919F700B703E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AA77DE23D919F700B703E9 /* AppDelegate.swift */; };
 		79AA77E123D919F700B703E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AA77E023D919F700B703E9 /* ViewController.swift */; };
 		79AA77E423D919F700B703E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AA77E223D919F700B703E9 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		79712F2023EBA43D00CC3D9C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		7985BA98241722A000078A26 /* QuotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
 		79AA77DB23D919F700B703E9 /* ColorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AA77DE23D919F700B703E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79AA77E023D919F700B703E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				79712F2023EBA43D00CC3D9C /* TextViewController.swift */,
 				79BFA8F32413221700A62E8E /* TabBarViewController.swift */,
 				79BFA8F5241323BA00A62E8E /* PickerViewController.swift */,
+				7985BA98241722A000078A26 /* QuotesTableViewController.swift */,
 			);
 			path = ColorApp;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				79BFA8F6241323BA00A62E8E /* PickerViewController.swift in Sources */,
 				79BFA8F42413221700A62E8E /* TabBarViewController.swift in Sources */,
+				7985BA99241722A000078A26 /* QuotesTableViewController.swift in Sources */,
 				79AA77E123D919F700B703E9 /* ViewController.swift in Sources */,
 				79AA77DF23D919F700B703E9 /* AppDelegate.swift in Sources */,
 				79712F2123EBA43D00CC3D9C /* TextViewController.swift in Sources */,

@@ -223,6 +223,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qXD-sX-5fF"/>
                         <segue destination="Np1-Hs-yUH" kind="relationship" relationship="viewControllers" id="TF8-9r-H7y"/>
+                        <segue destination="6ev-SW-X7D" kind="relationship" relationship="viewControllers" id="6ky-5b-0hV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBT-j2-if1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -380,7 +381,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiY-4V-T3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="974-M3-G91" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="28" y="-68"/>
+            <point key="canvasLocation" x="-300" y="-68"/>
         </scene>
         <!--MainPickerVC-->
         <scene sceneID="4JI-cv-tgR">
@@ -443,7 +444,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU1-CO-vks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="-68"/>
+            <point key="canvasLocation" x="942" y="-68"/>
+        </scene>
+        <!--Quotes List-->
+        <scene sceneID="lXI-sD-xiW">
+            <objects>
+                <viewController id="6ev-SW-X7D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pyf-NF-8ds">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eej-tq-YBy">
+                                <rect key="frame" x="158" y="44" width="98" height="78"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="23"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j7u-Mg-8o2">
+                                <rect key="frame" x="0.0" y="122" width="414" height="691"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j7u-Mg-8o2" firstAttribute="top" secondItem="eej-tq-YBy" secondAttribute="bottom" id="4L7-EK-kjJ"/>
+                            <constraint firstItem="eej-tq-YBy" firstAttribute="centerX" secondItem="pyf-NF-8ds" secondAttribute="centerX" id="FVU-0M-Xkk"/>
+                            <constraint firstItem="j7u-Mg-8o2" firstAttribute="leading" secondItem="sza-h4-2UH" secondAttribute="leading" id="cfC-Vv-RXZ"/>
+                            <constraint firstItem="eej-tq-YBy" firstAttribute="top" secondItem="sza-h4-2UH" secondAttribute="top" id="hdE-6W-ur1"/>
+                            <constraint firstItem="j7u-Mg-8o2" firstAttribute="bottom" secondItem="sza-h4-2UH" secondAttribute="bottom" id="uVs-RW-Ma2"/>
+                            <constraint firstItem="j7u-Mg-8o2" firstAttribute="trailing" secondItem="sza-h4-2UH" secondAttribute="trailing" id="xOe-dE-9Hh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sza-h4-2UH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Quotes List" image="speaker-icon" id="cvg-eG-SQX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dId-si-YnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2198.5507246376815" y="-68.303571428571431"/>
         </scene>
     </scenes>
     <resources>
