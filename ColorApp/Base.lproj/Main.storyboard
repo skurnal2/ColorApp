@@ -449,7 +449,7 @@
         <!--Quotes List-->
         <scene sceneID="lXI-sD-xiW">
             <objects>
-                <viewController id="6ev-SW-X7D" sceneMemberID="viewController">
+                <viewController id="6ev-SW-X7D" customClass="QuotesTableViewController" customModule="ColorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pyf-NF-8ds">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,6 +477,10 @@
                         <viewLayoutGuide key="safeArea" id="sza-h4-2UH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quotes List" image="speaker-icon" id="cvg-eG-SQX"/>
+                    <connections>
+                        <outlet property="quotesTableView" destination="j7u-Mg-8o2" id="yg3-cX-uq7"/>
+                        <outlet property="tableView" destination="j7u-Mg-8o2" id="fvE-Ix-kOu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dId-si-YnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
