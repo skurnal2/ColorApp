@@ -28,7 +28,7 @@ class QuotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath)
         
-        cell.textLabel?.text = quoteManager.quoteList[indexPath.row]
+        cell.textLabel?.text = quoteManager.quoteList[indexPath.row].author
         
         
         return cell
