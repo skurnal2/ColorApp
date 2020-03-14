@@ -8,37 +8,35 @@
 
 import UIKit
 
-class QuotesTableViewController: UITableViewController {
-
+class QuotesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     let quoteManager = QuoteManager()
     
-    
-    @IBOutlet weak var quotesTableView: UITableView!
-    
-    @IBAction func loadData(_ sender: UIButton) {
-        quotesTableView.reloadData()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return quoteManager.quoteList.count
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath)
         
-        cell.textLabel?.text = quoteManager.quoteList[indexPath.row].author
+        cell.textLabel?.text = quoteManager.quoteList[indexPath.row]
         
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return quoteManager.quoteList.count
+    
+    
+    
+    
+    @IBOutlet weak var quotesTableView: UITableView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        quoteManager.fetchQuotes {
+            self.quotesTableView.reloadData()
+        }
     }
-
-   
-
 }

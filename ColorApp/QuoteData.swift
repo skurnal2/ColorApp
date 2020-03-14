@@ -8,7 +8,10 @@
 
 import Foundation
 
+struct AllQuoteData : Decodable{
+    let results: [QuoteInfo]
+}
 struct QuoteInfo : Decodable  {
-    let quote: String
-    let author: String
+    let quoteText: String
+    let quoteAuthor: String
 }

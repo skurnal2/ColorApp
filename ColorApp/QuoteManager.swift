@@ -10,15 +10,12 @@ import UIKit
 
 import Foundation
 class QuoteManager {
-    var quoteUrlString = "https://andruxnet-random-famous-quotes.p.rapidapi.com"
-    let apiKey = "a3e5a49dcemsha4368f1bcc41dd0p16f41ejsn7893d7170b28"
+    var quoteUrlString = "https://quote-garden.herokuapp.com/quotes/search/life"
     
     
-    var quoteList  = [QuoteInfo]()
+    var quoteList = [String]()
     
-    init() {
-        //Appending Key to URL
-        quoteUrlString = quoteUrlString.appending("?x-rapidapi-key=\(apiKey)")
+   func fetchQuotes(completionHandler:@escaping () -> Void) {
         // Step 1: Create a URL instance
         if let quotesURL = URL(string: quoteUrlString) {
             // Step 2: Create a URLSession
@@ -35,8 +32,17 @@ class QuoteManager {
                     //                    print (responseDataString ?? "no response data")
                     let decoder = JSONDecoder()
                     do {
-                        let decodedData = try decoder.decode(QuoteInfo.self, from: responseData)
-                        self.quoteList = [decodedData]
+                        let decodedData = try decoder.decode(AllQuoteData.self, from: responseData)
+                        decodedData.results.forEach {
+                            singleQuote in
+                            print(singleQuote.quoteText)
+                            print(singleQuote.quoteAuthor)
+                            self.quoteList.append(singleQuote.quoteText)
+                            
+                            OperationQueue.main.addOperation {
+                                completionHandler()
+                            }
+                        }
                     } catch {
                         print(error)
                     }
