@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dKF-Xe-VaX">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dKF-Xe-VaX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +20,7 @@
                                 <rect key="frame" x="15" y="44" width="384" height="769"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ODK-wD-RFb">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="700.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="712.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-Qf-5tH">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="78"/>
@@ -63,10 +61,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="left" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="b0g-uI-GN7">
-                                                <rect key="frame" x="0.0" y="340.5" width="384" height="30"/>
+                                                <rect key="frame" x="0.0" y="340.5" width="384" height="34"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-FF-wcg">
-                                                        <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="288" height="35"/>
                                                         <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="maximumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="thumbTintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,11 +73,10 @@
                                                         </connections>
                                                     </slider>
                                                     <textField opaque="NO" contentMode="right" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="150.0" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6w-ug-4Nh">
-                                                        <rect key="frame" x="309" y="0.0" width="75" height="30"/>
+                                                        <rect key="frame" x="309" y="0.0" width="75" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="4It-d5-pbV"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
@@ -89,16 +86,16 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBd-9J-MC4">
-                                                <rect key="frame" x="0.0" y="393.5" width="384" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="397.5" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="auF-4R-ibj">
-                                                <rect key="frame" x="0.0" y="437" width="384" height="30"/>
+                                                <rect key="frame" x="0.0" y="441" width="384" height="34"/>
                                                 <subviews>
                                                     <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-d0-tMP">
-                                                        <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="288" height="35"/>
                                                         <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="maximumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="thumbTintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,11 +104,10 @@
                                                         </connections>
                                                     </slider>
                                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="150.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYW-VJ-2Dy">
-                                                        <rect key="frame" x="309" y="0.0" width="75" height="30"/>
+                                                        <rect key="frame" x="309" y="0.0" width="75" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="QgE-f8-Uh6"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
@@ -121,16 +117,16 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNe-1U-KfL">
-                                                <rect key="frame" x="0.0" y="490" width="384" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="498" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Wjg-3k-eKE">
-                                                <rect key="frame" x="0.0" y="533.5" width="384" height="30"/>
+                                                <rect key="frame" x="0.0" y="541.5" width="384" height="34"/>
                                                 <subviews>
                                                     <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bUg-nk-aiI">
-                                                        <rect key="frame" x="-2" y="0.0" width="288" height="31"/>
+                                                        <rect key="frame" x="-2" y="0.0" width="288" height="35"/>
                                                         <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="maximumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="thumbTintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,11 +135,10 @@
                                                         </connections>
                                                     </slider>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="150.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-gB-UpT">
-                                                        <rect key="frame" x="309" y="0.0" width="75" height="30"/>
+                                                        <rect key="frame" x="309" y="0.0" width="75" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="Fo4-c9-4ru"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
@@ -153,7 +148,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyb-qV-rQN">
-                                                <rect key="frame" x="0.0" y="586.5" width="384" height="51"/>
+                                                <rect key="frame" x="0.0" y="598.5" width="384" height="51"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
                                                 <color key="tintColor" red="1" green="0.99165439639999997" blue="0.32767891500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -165,7 +160,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eo-TI-HXM">
-                                                <rect key="frame" x="0.0" y="660.5" width="384" height="40"/>
+                                                <rect key="frame" x="0.0" y="672.5" width="384" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.99165439639999997" blue="0.32767891500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="27"/>
                                                 <state key="normal" title="EDIT Text MANUALLY"/>
@@ -194,7 +189,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Background and Text" image="speaker-icon" selectedImage="speaker-icon" id="Ehk-Mw-vQP"/>
+                    <tabBarItem key="tabBarItem" title="Background and Text" image="photo-7" id="Ehk-Mw-vQP"/>
                     <connections>
                         <outlet property="blueSlider" destination="Dzt-d0-tMP" id="Kfl-5Y-5H2"/>
                         <outlet property="blueTextbox" destination="TYW-VJ-2Dy" id="mJE-sx-2H5"/>
@@ -235,11 +230,11 @@
             <objects>
                 <viewController title="TextVC" id="WAP-zL-2ux" customClass="TextViewController" customModule="ColorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PAb-bU-j2T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-Fc-Ibc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Edit Text" id="WJE-po-mln">
                                         <barButtonItem key="leftBarButtonItem" title="Go Back" id="jPf-rk-Kvs">
@@ -256,13 +251,13 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAMPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8f-Tq-54n">
-                                <rect key="frame" x="0.0" y="88" width="414" height="48"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifN-CK-YXE">
-                                <rect key="frame" x="11" y="238" width="393" height="624"/>
+                                <rect key="frame" x="11" y="206" width="393" height="602"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="dzK-J9-Zph">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="219"/>
@@ -275,7 +270,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="317" id="sew-D0-00B"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                         <connections>
@@ -436,7 +430,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="63C-be-EIm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Font Color" image="speaker-icon" selectedImage="speaker-icon" id="U5Y-FP-ZN4"/>
+                    <tabBarItem key="tabBarItem" title="Font Color" image="photo-abstract-7" id="U5Y-FP-ZN4"/>
                     <connections>
                         <outlet property="colorView" destination="tGX-w7-VD7" id="GuO-oS-yI7"/>
                         <outlet property="sampleLabel" destination="23i-ow-8Io" id="xFc-Rf-09B"/>
@@ -465,7 +459,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quoteCell" textLabel="ccS-hi-iFV" style="IBUITableViewCellStyleDefault" id="nig-By-Nis">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nig-By-Nis" id="jBH-vp-iOg">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -499,7 +493,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sza-h4-2UH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quotes List" image="speaker-icon" id="cvg-eG-SQX"/>
+                    <tabBarItem key="tabBarItem" title="Quotes List" image="list-simple-star-7" id="cvg-eG-SQX"/>
                     <connections>
                         <outlet property="quotesTableView" destination="j7u-Mg-8o2" id="yg3-cX-uq7"/>
                     </connections>
@@ -510,6 +504,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list-simple-star-7" width="30" height="30"/>
+        <image name="photo-7" width="15" height="15"/>
+        <image name="photo-abstract-7" width="15" height="15"/>
         <image name="speaker-icon" width="15" height="15"/>
     </resources>
 </document>
