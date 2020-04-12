@@ -18,6 +18,8 @@
 		79AA77E923D919F900B703E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AA77E723D919F900B703E9 /* LaunchScreen.storyboard */; };
 		79BFA8F42413221700A62E8E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFA8F32413221700A62E8E /* TabBarViewController.swift */; };
 		79BFA8F6241323BA00A62E8E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFA8F5241323BA00A62E8E /* PickerViewController.swift */; };
+		EFE54D1B2442AF900033580E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFE54D1A2442AF900033580E /* Settings.bundle */; };
+		EFE54D1D2442B6CC0033580E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE54D1C2442B6CC0033580E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		79AA77EA23D919F900B703E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79BFA8F32413221700A62E8E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		79BFA8F5241323BA00A62E8E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		EFE54D1A2442AF900033580E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		EFE54D1C2442B6CC0033580E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				7985BA98241722A000078A26 /* QuotesTableViewController.swift */,
 				7985BA9A2417266D00078A26 /* QuoteData.swift */,
 				7985BA9C241726DB00078A26 /* QuoteManager.swift */,
+				EFE54D1A2442AF900033580E /* Settings.bundle */,
+				EFE54D1C2442B6CC0033580E /* SettingsViewController.swift */,
 			);
 			path = ColorApp;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE54D1B2442AF900033580E /* Settings.bundle in Resources */,
 				79AA77E923D919F900B703E9 /* LaunchScreen.storyboard in Resources */,
 				79AA77E623D919F900B703E9 /* Assets.xcassets in Resources */,
 				79AA77E423D919F700B703E9 /* Main.storyboard in Resources */,
@@ -161,6 +168,7 @@
 				7985BA9B2417266D00078A26 /* QuoteData.swift in Sources */,
 				7985BA9D241726DB00078A26 /* QuoteManager.swift in Sources */,
 				79712F2123EBA43D00CC3D9C /* TextViewController.swift in Sources */,
+				EFE54D1D2442B6CC0033580E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
