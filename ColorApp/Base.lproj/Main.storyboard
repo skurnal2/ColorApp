@@ -306,10 +306,7 @@
                                                 <rect key="frame" x="0.0" y="192" width="394" height="34"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhq-UA-uQ0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="120" id="Xsj-F3-hkk"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Sync Settings"/>
                                                         <connections>
@@ -317,10 +314,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0b-1N-QZO">
-                                                        <rect key="frame" x="274" y="0.0" width="120" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="120" id="FSA-K2-dac"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="295" y="0.0" width="99" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="Save Details"/>
                                                         <connections>
