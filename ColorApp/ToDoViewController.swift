@@ -9,17 +9,27 @@
 import UIKit
 import CoreData
 
-class ToDoViewController: UIViewController {
-
-    var dataManager: NSManagedObjectContext!
+class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
     
     var todoList = [NSManagedObject]()
+    
+    var dataManager: NSManagedObjectContext!
     
     @IBOutlet weak var titleText: UITextField!
     
     @IBOutlet weak var descriptionText: UITextField!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todoList.count
+    }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
+        
+        cell.textLabel?.text = todoList[indexPath.row].value(forKey: "entryTitle") as? String
+        cell.textLabel?.text = todoList[indexPath.row].value(forKey: "entryDescription") as? String
+        return cell
+    }
+
     @IBAction func addNewTodoItem(_ sender: UIButton) {
         
          let newTodoItem = NSEntityDescription.insertNewObject(forEntityName: "ToDoItem", into: dataManager)
