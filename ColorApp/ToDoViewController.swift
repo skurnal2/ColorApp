@@ -22,11 +22,12 @@ class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         return todoList.count
     }
     
+    @IBOutlet weak var todoListTable: UITableView!
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
         
         cell.textLabel?.text = todoList[indexPath.row].value(forKey: "entryTitle") as? String
-        cell.textLabel?.text = todoList[indexPath.row].value(forKey: "entryDescription") as? String
+        
         return cell
     }
 
@@ -49,10 +50,12 @@ class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                descriptionText.text?.removeAll()
               
                 //Reloading the table view
+        todoList = getAllTodoItems()
+        todoListTable.reloadData()
     }
     
     func getAllTodoItems() -> [NSManagedObject] {
-         let fetchRequest : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "ProductItem")
+         let fetchRequest : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "ToDoItem")
                do {
                    let result = try dataManager.fetch(fetchRequest)
                    todoList = result as! [NSManagedObject]
@@ -64,7 +67,8 @@ class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        dataManager = appDelegate.persistentContainer.viewContext
+            todoList = getAllTodoItems()
     }
 }
