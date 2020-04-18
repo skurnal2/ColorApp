@@ -23,14 +23,34 @@ class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     @IBOutlet weak var todoListTable: UITableView!
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
         
         cell.textLabel?.text = todoList[indexPath.row].value(forKey: "entryTitle") as? String
         
+        cell.detailTextLabel?.text = todoList[indexPath.row].value(forKey: "entryDescription") as? String
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let todoItemToDelete = todoList[indexPath.row]
+            dataManager.delete(todoItemToDelete)
+            todoList.remove(at: indexPath.row)
+            todoListTable.deleteRows(at: [indexPath], with: .fade)
 
+            do {
+                try
+                    dataManager.save()
+            } catch {
+                print("Cannot delete the todo item.")
+            }
+            
+        }
+    }
+    
     @IBAction func addNewTodoItem(_ sender: UIButton) {
         
          let newTodoItem = NSEntityDescription.insertNewObject(forEntityName: "ToDoItem", into: dataManager)
@@ -50,8 +70,8 @@ class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                descriptionText.text?.removeAll()
               
                 //Reloading the table view
-        todoList = getAllTodoItems()
-        todoListTable.reloadData()
+                todoList = getAllTodoItems()
+                todoListTable.reloadData()
     }
     
     func getAllTodoItems() -> [NSManagedObject] {
