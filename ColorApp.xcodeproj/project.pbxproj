@@ -18,6 +18,8 @@
 		79AA77E923D919F900B703E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AA77E723D919F900B703E9 /* LaunchScreen.storyboard */; };
 		79BFA8F42413221700A62E8E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFA8F32413221700A62E8E /* TabBarViewController.swift */; };
 		79BFA8F6241323BA00A62E8E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFA8F5241323BA00A62E8E /* PickerViewController.swift */; };
+		EF603C57244AC59B00929A1C /* ColorApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF603C55244AC59B00929A1C /* ColorApp.xcdatamodeld */; };
+		EF603C59244AC69A00929A1C /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF603C58244AC69A00929A1C /* ToDoViewController.swift */; };
 		EFE54D1B2442AF900033580E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFE54D1A2442AF900033580E /* Settings.bundle */; };
 		EFE54D1D2442B6CC0033580E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE54D1C2442B6CC0033580E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		79AA77EA23D919F900B703E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79BFA8F32413221700A62E8E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		79BFA8F5241323BA00A62E8E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		EF603C56244AC59B00929A1C /* ColorApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColorApp.xcdatamodel; sourceTree = "<group>"; };
+		EF603C58244AC69A00929A1C /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		EFE54D1A2442AF900033580E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		EFE54D1C2442B6CC0033580E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +88,8 @@
 				7985BA9C241726DB00078A26 /* QuoteManager.swift */,
 				EFE54D1A2442AF900033580E /* Settings.bundle */,
 				EFE54D1C2442B6CC0033580E /* SettingsViewController.swift */,
+				EF603C55244AC59B00929A1C /* ColorApp.xcdatamodeld */,
+				EF603C58244AC69A00929A1C /* ToDoViewController.swift */,
 			);
 			path = ColorApp;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF603C59244AC69A00929A1C /* ToDoViewController.swift in Sources */,
 				79BFA8F6241323BA00A62E8E /* PickerViewController.swift in Sources */,
 				79BFA8F42413221700A62E8E /* TabBarViewController.swift in Sources */,
 				7985BA99241722A000078A26 /* QuotesTableViewController.swift in Sources */,
@@ -169,6 +176,7 @@
 				7985BA9D241726DB00078A26 /* QuoteManager.swift in Sources */,
 				79712F2123EBA43D00CC3D9C /* TextViewController.swift in Sources */,
 				EFE54D1D2442B6CC0033580E /* SettingsViewController.swift in Sources */,
+				EF603C57244AC59B00929A1C /* ColorApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF603C55244AC59B00929A1C /* ColorApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF603C56244AC59B00929A1C /* ColorApp.xcdatamodel */,
+			);
+			currentVersion = EF603C56244AC59B00929A1C /* ColorApp.xcdatamodel */;
+			path = ColorApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 79AA77D323D919F700B703E9 /* Project object */;
 }
