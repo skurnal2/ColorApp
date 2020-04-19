@@ -265,7 +265,7 @@
                                     <action selector="addNewTodoItem:" destination="muY-1o-ybE" eventType="touchUpInside" id="iTr-nk-iF5"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nne-ht-jcR">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nne-ht-jcR">
                                 <rect key="frame" x="0.0" y="103" width="248" height="157"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-uI-iHP">
@@ -313,6 +313,7 @@
                             <constraint firstItem="7ts-0f-qGR" firstAttribute="leading" secondItem="nne-ht-jcR" secondAttribute="trailing" constant="36" id="BRJ-Yh-RBh"/>
                             <constraint firstItem="7ts-0f-qGR" firstAttribute="top" secondItem="wtN-3s-R9k" secondAttribute="bottom" constant="52.5" id="DXG-8S-HAy"/>
                             <constraint firstItem="hix-Dj-Uaf" firstAttribute="bottom" secondItem="D7b-Ps-gbh" secondAttribute="bottom" id="GO9-ch-5ar"/>
+                            <constraint firstItem="hix-Dj-Uaf" firstAttribute="top" secondItem="nne-ht-jcR" secondAttribute="bottom" constant="8" id="IMk-3K-GuH"/>
                             <constraint firstItem="nne-ht-jcR" firstAttribute="leading" secondItem="D7b-Ps-gbh" secondAttribute="leading" id="IwF-lM-Iv6"/>
                             <constraint firstItem="hix-Dj-Uaf" firstAttribute="trailing" secondItem="D7b-Ps-gbh" secondAttribute="trailing" id="MTI-7b-bwq"/>
                             <constraint firstItem="hix-Dj-Uaf" firstAttribute="top" secondItem="7ts-0f-qGR" secondAttribute="bottom" constant="12.5" id="Sah-HN-nqt"/>

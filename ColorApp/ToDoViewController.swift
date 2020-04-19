@@ -9,6 +9,14 @@
 import UIKit
 import CoreData
 
+extension Date {
+  func asString(style: DateFormatter.Style) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = style
+    return dateFormatter.string(from: self)
+  }
+}
+
 class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
     
     var todoList = [NSManagedObject]()
@@ -49,6 +57,24 @@ class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             }
             
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let todoItemToShow = todoList[indexPath.row]
+        let todotitle = todoItemToShow.value(forKey: "entryTitle") as? String
+        let description = todoItemToShow.value(forKey: "entryDescription") as? String
+        let date = todoItemToShow.value(forKey: "createdDate") as? Date
+        let newMessage: String = "Created Date : " + (date?.asString(style: .long))! + "\n\n" + description!
+        
+        let alertController = UIAlertController(title: todotitle, message: newMessage, preferredStyle: .alert)
+               
+               let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
+                 
+               alertController.addAction(doneAction)
+           
+               present(alertController, animated: true, completion: nil)
+        
     }
     
     @IBAction func addNewTodoItem(_ sender: UIButton) {
