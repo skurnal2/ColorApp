@@ -32,6 +32,11 @@ class ToDoViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var todoListTable: UITableView!
     
+    @IBAction func doneEditing(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
         
